@@ -1,0 +1,109 @@
+address, article, aside, blockquote, body, cite,
+div, dl, dt, dd, em, figcaption, figure, footer,
+h1, h2, h3, h4, h5, h6, header, html, img,
+li, main, nav, ol, p, section, span, ul {
+    background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+nav ul {
+    list-style: none;
+    list-style-image: none;
+}
+nav a {
+    text-decoration: none;
+}
+body {
+    line-height: 1;
+}
+
+
+
+
+body{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 4fr 2fr 1fr;
+    grid-template-areas: "header header "
+                        "about timeline"
+                        "images timeline"
+                        "resources resources"
+                        " footer footer";
+    grid-column-gap: 10px;
+}
+
+body > header > img {grid-area:header}
+body > nav {grid-area: nav}
+body > aside {grid-area: timeline;}
+body > section> .first-section {grid-area: about;}
+body > section> .second-section {grid-area: images;}
+body > footer {grid-area: footer;}
+body > ul > .resources {grid-area: resources}
+
+
+.first-section {
+    display: grid;
+    grid-row: 2/4;
+    grid-column: 1/2;
+}
+
+.second-section{
+    display: grid;
+    grid-template-columns: repeat(0.5fr, 1fr);
+}
+
+body > * {
+    outline: 2px dashed orange;
+}
+
+section > *{
+    outline: 2px dashed yellowgreen;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+body >header > {
+    grid-row: 1;
+    grid-column: 1/-1;
+    display: block;
+    width: 100%;
+}
+
+body> header > nav ul {
+    display: grid;
+    text-align: center;
+    background-color:blueviolet;
+   grid-row: 2/4;
+   grid-column: 2/4;
+}
+
+
+ul> li {
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.resources{
+    background-color: pink;
+    text-decoration: none;
+    color: white;
+    clear:both;
+    grid-template-columns: repeat (3,1fr);
+    align-items: center;
+}
+
+section > h1 {
+    grid-area: 1/1/2/3;
+}
+
+
+body> header > nav li {
+    height: 33.3333%;
+    display: block;
+    float: left;
+    text-align: center;
+}
