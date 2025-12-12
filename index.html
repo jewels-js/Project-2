@@ -4,24 +4,61 @@
     <title>Que Lo Que</title>
     <meta charset="utf-8">
     <meta name="keywords" content="Latine, Latino, music, film, art, books, writer">
-    
+    <link href="reset.css" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="site logo.png" alt="website logo">
+    <div class = "container">
+        <header>
+            <h1>QUE LO QUE</h1>
+        </header>
         <nav> 
-            <ul>
-                <li><a href="#" alt="Home">Home</a></li>
-                <li><a href="#" alt="Editorial">Editorial</a></li>
-                <li><a href="#" alt="Film">Film</a></li>
-                <li><a href="#" alt="Art">Art</a></li>
-                <li><a href="#" alt="Music">Music</a></li>
-            </ul> 
+                <ul>
+                    <li><a href="#" alt="Home">Home</a></li>
+                    <li><a href="#" alt="Editorial">Editorial</a></li>
+                    <li><a href="#" alt="Film">Film</a></li>
+                    <li><a href="#" alt="Art">Art</a></li>
+                    <li><a href="music.html" alt="Music">Music</a></li>
+                </ul> 
         </nav>
-    </header>
-        <Section id="first section">
-            
+        <section class="form">
+                <p>Have any suggestions for which icons we cover next? Let us know!</p>
+                    Fill out the form below:<br>
+                    <a href="#" id="open-popup">Click here!</a>
+                        <div class="popup-overlay" id="popup-overlay">
+                            <div class="popup-content">
+                                <span class="close-btn" id="close-popup">&times;</span>
+                                <h2>Contact Us</h2>
+                                <form action="#" method="POST">
+                                    <label for="name">Your name:</label>
+                                    <input type="text" id="name" name="custName" required>
+      
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+
+                                    <label for="artistName"><br>Who should we spotlight next?</label>
+                                    <input type="text" id="suggestion" name="suggestedName" required>
+                                    
+                                    <label for="info"><br>What medium does this creative specialize in?
+                                    <br>(select all that apply) </label>
+                                        <select name="infoSrc" id="info" size="5" multiple>
+                                            <option value="Editorial">Editorial</option>
+                                            <option value="Film">Film</option>
+                                            <option value="Art">Art</option>
+                                            <option value="Music">Music</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+
+                                    <label for="explanation"><br>Why do you think they deserve recognition?</label>
+                                    <input type="text" id="why" name="suggestedReason" optional>
+                                    <button type="submit" value="Submit My Form">Submit</button>
+                                    <button type="reset" value="cancel">Reset</button>
+                                </form>
+                            </div>
+                        </div>
+        </section>
+
+        <section class="about">
             <h2>ABOUT</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. 
                     Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
@@ -34,39 +71,83 @@
                     rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. 
                     Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper 
                     libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, 
-                    hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero 
-                    venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis 
-                    leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget 
-                    bibendum sodales, augue velit cursus nunc,</p>
-        </Section>
-        <section id="second section">
+                    hendrerit id, lorem.  </p>
+        </section>
+        <section class="portraits">
             <h3>Explore the Icons of Each Medium</h3>
                 <article>
                     <ul>
-                        <li><img src="#"></li>
-                        <li><img src="#"></li>
-                        <li><img src="#"></li>
-                        <li><img src="#"></li>
+                        <li><img src="#" alt=""></li>
+                        <li><img src="#" alt=""></li>
+                        <li><img src="#" alt=""></li>
+                        <li><img src="#" alt=""></li>
                         
                     </ul>
                 </article>
         </section>
-    <aside>
+        <section class="timeline">
             <h2>Timeline of Contributions:</h2> 
                 <article>
-                    Timeline will be here
+                    <p>Timeline will be here</p>
+                    <ul>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                        <li>1800</li>
+                    </ul>
                 </article>
-    </aside>
-    <ul class="resources">
-        <li><a href="#" alt="Resource 1">Resource 1</a></li>
-        <li><a href="#" alt="Resource 2">Resource 2</a></li>
-        <li><a href="#" alt="Resource 3">Resource 3</a></li>
-        <li><a href="#" alt="Resource 4">Resource 4</a></li>
-        <li><a href="#" alt="Resource 5">Resource 5</a></li>
-        <li><a href="#" alt="Resource 6">Resource 6</a></li>
-    </ul>
-       
-<footer>Last updated at: <time datetime="2025-11-30T23:30">November 30, 2025 at 11:30 p.m.</time>    
-</footer>
+        </section>
+        <footer>
+            <section class="resource-title">
+                <p>Resources to learn about other influential Latine artists and creators shaping the world today:</p>
+            </section>
+            <section class="footer-container">
+                <section class="resources1">
+                    <ul>
+                        <li><a href="#" alt="Resource 1">Resource 1</a></li>
+                        <li><a href="#" alt="Resource 2">Resource 2</a></li>
+                        <li><a href="#" alt="Resource 3">Resource 3</a></li>
+                        <li><a href="#" alt="Resource 4">Resource 4</a></li>
+                    </ul>
+                </section>
+                <section class="resources2">
+                    <ul>
+                        <li><a href="#" alt="Resource 5">Resource 5</a></li>
+                        <li><a href="#" alt="Resource 6">Resource 6</a></li>
+                        <li><a href="#" alt="Resource 7">Resource 7</a></li>
+                        <li><a href="#" alt="Resource 8">Resource 8</a></li>
+                    </ul>
+                </section>
+                <section class="resources3">
+                    <ul>
+                        <li><a href="#" alt="Resource 9">Resource 9</a></li>
+                        <li><a href="#" alt="Resource 10">Resource 10</a></li>
+                        <li><a href="#" alt="Resource 11">Resource 11</a></li>
+                        <li><a href="#" alt="Resource 12">Resource 12</a></li>
+                    </ul>
+                </section>
+            </section>
+            <p>Last updated on December 11, 2025 at 10:00pm </p>
+        </footer>
+    </div>
 </body>
 </html>

@@ -1,103 +1,154 @@
-address, article, aside, blockquote, body, cite,
-div, dl, dt, dd, em, figcaption, figure, footer,
-h1, h2, h3, h4, h5, h6, header, html, img,
-li, main, nav, ol, p, section, span, ul {
-    background: transparent;
-    font-size: 100%;
-    margin: 0;
-    padding: 0;
-    vertical-align: baseline;
+html, body {
+    margin: auto;
+    width: 100vw;
+    height: 100%;
+    font-family: Courier, monospace;
+    color:black;
+    line-height: 2;
     box-sizing: border-box;
+    padding:5px;
 }
-nav ul {
-    list-style: none;
-    list-style-image: none;
-}
-nav a {
-    text-decoration: none;
-}
-body {
-    line-height: 
+
+.container{
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 4fr 2fr 1fr;
-    grid-template-areas: "header header "
-                        "about timeline"
-                        "images timeline"
-                        "resources resources"
-                        " footer footer";
-    grid-column-gap: 10px;
+    min-height: 100vh;
+    grid-template-columns: (1fr, 2fr, 1fr);
+    grid-template-areas: "header header header"
+                        "nav about timeline"
+                        "form portraits timeline"
+                        "resources1 resources2 resources3";
+    gap: 10px;
+    padding: 5px;
 }
 
-body > header > img {grid-area:header}
-body > nav {grid-area: nav}
-body > aside {grid-area: timeline;}
-body > section> .first-section {grid-area: about;}
-body > section> .second-section {grid-area: images;}
-body > footer {grid-area: footer;}
-body > ul > .resources {grid-area: resources}
+header {grid-area:header;}
+nav {grid-area: nav;}
+.timeline {grid-area:timeline;}
+.about {grid-area: about;}
+.portraits {grid-area: portraits;}
+.resources1 {grid-area:resources1;}
+.resources2 {grid-area:resources2;}
+.resources3 {grid-area:resources3}
+.form {grid-area:form;}
 
-
-.first-section {
-    display: grid;
-    grid-row: 2/4;
-    grid-column: 1/2;
-}
-
-.second-section{
-    display: grid;
-    grid-template-columns: repeat(0.5fr, 1fr);
-}
 
 body > * {
-    outline: 2px dashed orange;
+    outline: 2px dashed blue;
 }
 
 section > *{
-    outline: 2px dashed yellowgreen;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    outline: 2px dashed red;
 }
 
-body >header > {
-    grid-row: 1;
-    grid-column: 1/-1;
-    display: block;
-    width: 100%;
+header > nav{
+    grid-row-start: 2;
 }
 
-body> header > nav ul {
-    display: grid;
+header {
+    font-size: x-large;
+    grid-template-rows: auto;
+    grid-column: 1/4;
+    background-color:pink;
+    color:white;
+    padding:20px;
     text-align: center;
-    background-color:blueviolet;
-   grid-row: 2/4;
-   grid-column: 2/4;
 }
 
-
-ul> li {
+ul {
     text-decoration: none;
     list-style: none;
 }
 
+.footer-container{
+    display: grid;
+    grid-template-columns:1fr,1fr, 1fr;
+}
 
-.resources{
-    background-color: pink;
+.footer-container li a:hover{
+    color:blue;
+    text-decoration: underline;
+}
+
+.footer-container li a{
     text-decoration: none;
-    color: white;
-    clear:both;
-    grid-template-columns: repeat (3,1fr);
-    align-items: center;
+    color:purple;
+    padding: 5px;
+    display:block;
 }
 
-section > h1 {
-    grid-area: 1/1/2/3;
+footer{
+    background-color: lightpink;
+    padding-top: 20px;
+    grid-column: 1/4;
+}
+
+.resources1{
+    grid-row:4;
+    grid-column:1;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.resources2{
+    grid-row: 4;
+    grid-column: 2;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.resources3{
+    grid-row: 4;
+    grid-column:3;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+footer > p {
+    justify-items:center;
+    justify-content:stretch;
+    display: grid;
+    grid-row:6;
+    grid-column:1/4;
+    background-color: pink;
+}
+
+.resource-title{
+    justify-items:center;
+    justify-content:stretch;
+    padding-top: 20px;
+    grid-column: 1/4;
+}
+
+.portraits > ul li {
+    grid-template-columns: repeat (2,1fr);
+    grid-template-rows: (1fr,1fr);
 }
 
 
-body> header > nav li {
-    height: 33.3333%;
-    display: block;
-    float: left;
-    text-align: center;
+/*CSS for Image Gallery*/
+
+div.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+div.gallery-item {
+  margin: 5px;
+  border: 1px solid #ccc;
+  width: 180px;
+}
+
+div.gallery-item:hover {
+  border: 1px solid #777;
+}
+
+div.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+div.gallery-item div.desc {
+  padding: 15px;
+  text-align: center;
 }
