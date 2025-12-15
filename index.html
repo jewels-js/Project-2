@@ -5,22 +5,30 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Latine, Latino, music, film, art, books, writer">
     <link href="reset.css" rel="stylesheet">
-    <link href="main.css" rel="stylesheet">
+    <link href="grid.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
     <div class = "container">
         <header>
             <h1>QUE LO QUE</h1>
+            
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+                integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+                crossorigin="anonymous"></script>
         </header>
-        <nav> 
+        <section class="nav">
+            <nav> 
                 <ul>
                     <li><a href="index.html" alt="Home">Home</a></li>
-                    <li><a href="#" alt="Editorial">Editorial</a></li>
-                    <li><a href="#" alt="Film">Film</a></li>
-                    <li><a href="#" alt="Art">Art</a></li>
+                    <li><a href="editorial.html" alt="Editorial">Editorial</a></li>
+                    <li><a href="film.html" alt="Film">Film</a></li>
+                    <li><a href="art.html" alt="Art">Art</a></li>
                     <li><a href="music.html" alt="Music">Music</a></li>
                 </ul> 
-        </nav>
+            </nav>
+        </section>
         <section class="form">
                 <p>Have any suggestions for which icons we cover next? Let us know!</p>
                     Fill out the form below:<br>
@@ -74,17 +82,38 @@
                     hendrerit id, lorem.  </p>
         </section>
         <section class="portraits">
-            <h3>Explore the Icons of Each Medium</h3>
-                <article>
-                    <ul>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        <li><img src="#" alt=""></li>
-                        
-                    </ul>
-                </article>
-        </section>
+            <h3>This month's top 3 featured writers:</h3>
+                <section class="card-group">
+                        <div class="card">
+                            <img src="https://d28hgpri8am2if.cloudfront.net/author_images/4896_35013349.jpg" class="card-img-top" alt="Portrait of Helena Maria Viramontes">
+                            <div class="card-body">
+                                <h5 class="card-title">Helena Maria Viramontes</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
+                                    This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://static01.nyt.com/images/2020/04/12/books/review/Dickerson1/Dickerson1-superJumbo-v2.jpg" 
+                            class="card-img-top" alt="Portrait of Karla Cornejo Villavicencio">
+                            <div class="card-body">
+                                <h5 class="card-title">Karla Cornejo Villavicencio</h5>
+                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpBavAmeuYpTgBNBaKZ9--r3211J01x7i2NjrB5zcuEQ&s" 
+                            class="card-img-top" alt="Portrait of Agustina Bazterrica">
+                            <div class="card-body">
+                                <h5 class="card-title">Augustina Bazterrica</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. 
+                                    This card has even longer content than the first to show that equal height action.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
         <section class="timeline">
             <h2>Timeline of Contributions:</h2> 
                 <article>
