@@ -2,7 +2,7 @@ html, body {
     margin: auto;
     width: 100vw;
     height: 100%;
-    font-family: Courier, monospace;
+    font-family: Copperplate, Papyrus, fantasy;
     color:black;
     line-height: 2;
     box-sizing: border-box;
@@ -34,14 +34,6 @@ header > h1 {grid-area:header;}
 .form {grid-area:form;}
 
 
-body > * {
-    outline: 2px dashed blue;
-}
-
-section > *{
-    outline: 2px dashed red;
-}
-
 .nav{
     grid-row-start: 2;
 }
@@ -49,6 +41,7 @@ section > *{
 header > h1 {
     border-color: rgb(246, 80, 221);
     font-size: xx-large;
+    font-family: Courier, monospace;
 }
 
 
@@ -88,7 +81,7 @@ ul {
 }
 
 footer{
-    background-color: white;
+    background-color: pink;
     padding-top: 20px;
     grid-column: 1/4;
 }
@@ -128,4 +121,11 @@ footer > p {
     justify-content:stretch;
     padding-top: 20px;
     grid-column: 1/4;
+}
+
+
+.form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-color: double 5px black;
 }

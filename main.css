@@ -1,15 +1,13 @@
-
 html, body {
     margin: auto;
     width: 100vw;
     height: 100%;
-    font-family: Courier, monospace;
     color:black;
     line-height: 2;
     box-sizing: border-box;
     padding-left:15px;
     padding-right: 15px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Copperplate, Papyrus, fantasy;
 }
 
 .container{
@@ -17,11 +15,10 @@ html, body {
     min-height: 100vh;
     grid-template-columns: 1fr 2fr 1fr;
     grid-template-areas: "header header header"
-                        "nav content ."
-                        "nav accordion ."
+                        "nav content aside"
+                        "nav accordion aside"
                         "resources1 resources2 resources3";
     gap: 10px;
-    background-color: white;
 }
 
 header > h1 {grid-area:header;}
@@ -31,14 +28,7 @@ header > h1 {grid-area:header;}
 .resources3 {grid-area:resources3}
 .questions {grid-area:accordion;}
 .content {grid-area: content;}
-
-body > * {
-    outline: 2px dashed blue;
-}
-
-section > *{
-    outline: 2px dashed red;
-}
+aside {grid-area: aside}
 
 .nav{
     grid-row-start: 2;
@@ -47,6 +37,7 @@ section > *{
 header > h1 {
     border-color: rgb(246, 80, 221);
     font-size: xx-large;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -80,15 +71,15 @@ ul {
 
 .footer-container li a{
     text-decoration: none;
-    color:purple;
+    color:white;
     padding: 5px;
     display:block;
 }
 
 footer{
-    background-color: white;
     padding-top: 20px;
     grid-column: 1/4;
+    background-color: pink;
 }
 
 .resources1{
@@ -123,13 +114,21 @@ footer > p {
 
 .content {
     padding: 20px;
-    
 }
 
 .accordion {
     padding-top: 20px;
 }
 
+.form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.timeline{
+    justify-content: center;
+    justify-items: center;
+}
 
 /* Heading Styling*/
 
@@ -145,6 +144,7 @@ div.gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  background-color: pink;
 }
 
 div.gallery-item {
@@ -166,3 +166,60 @@ div.gallery-item div.desc {
   padding: 15px;
   text-align: center;
 }
+
+/*Nav Styling*/
+
+nav > ul li {
+    color:burlywood;
+    border-color:#e86bc5;
+}
+
+/*Scrolling Gallery*/
+
+.scroll-gallery {
+  width: 200px;
+  height: 400px;
+  overflow: hidden; /* Hide the images outside the window */
+  background: #f0f0f0;
+  padding: 30px;
+  border: 1px solid #ccc;
+}
+
+.scroll-track {
+  display: flex;
+  flex-direction: column;
+  height: max-content; 
+  animation: scroll-up 20s linear infinite; /* Constant speed */
+}
+
+.scroll-track img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Pause on hover for better user experience */
+.scroll-gallery:hover .scroll-track {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    /* Move by half the total track height (one full set of images) */
+    transform: translateY(-50%);
+  }
+}
+
+/* General Image Styling */
+
+.image-container img {
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    justify-content: center;
+    justify-items: center;
+}
+
